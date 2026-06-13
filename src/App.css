@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100svh;
+  width: 100svw;
+  background-color: rgb(255, 234, 238);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  font-family: "legitima", serif;
+  color: rgb(40, 35, 36);
+  letter-spacing: 1.5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 180px;
+  transform: scaleX(-1);
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+section {
+  font-family: "Cormorant Garamond", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+input {
+  height: 40px;
+  width: 100%;
+  color: black;
+}
