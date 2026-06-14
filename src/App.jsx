@@ -68,7 +68,7 @@ export default function SaveTheDate() {
   return (
     <div className="page-wrapper">
       {/* Top border accent */}
-      <div className="page-border-top" aria-hidden="true" />
+      {/* <div className="page-border-top" aria-hidden="true" /> */}
 
       {/* ── HERO ── */}
       <section className="hero-section">
@@ -83,7 +83,7 @@ export default function SaveTheDate() {
         {/* Save the Date */}
         <h1 className="save-the-date">Save the Date</h1>
 
-        <div className="divider" aria-hidden="true" />
+        {/* <div className="divider" aria-hidden="true" /> */}
       </section>
 
       {/* ── VIDEO ── */}
@@ -107,7 +107,8 @@ export default function SaveTheDate() {
           Manny <span className="ampersand">&amp;</span> Liv
         </h2>
 
-        <p className="wedding-details">February 7, 2027 &bull; Lakeland, FL</p>
+        <p className="wedding-details">February 7, 2027</p>
+        <p className="wedding-details">Lakeland, FL</p>
 
         <div className="countdown-wrapper" aria-label={`${daysToGo} days to go`}>
           <div className="countdown-display">
@@ -198,17 +199,17 @@ export default function SaveTheDate() {
 
       {/* ── FOOTER ── */}
       <footer className="footer-section">
-        <div className="divider" aria-hidden="true" />
+        {/* <div className="divider" aria-hidden="true" /> */}
 
         <p className="see-you-soon">See You Soon!</p>
 
-        <div className="footer-emblem" aria-hidden="true">
+        {/* <div className="emblem-wrapper" aria-hidden="true">
           <img src={EMBLEM_URL} alt="" />
-        </div>
+        </div> */}
       </footer>
 
       {/* Bottom border accent */}
-      <div className="page-border-bottom" aria-hidden="true" />
+      {/* <div className="page-border-bottom" aria-hidden="true" /> */}
     </div>
   );
 }

@@ -73,6 +73,7 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  gap: 2rem;
 }
 
 /* =============================================
@@ -99,16 +100,17 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-md);
+  padding: var(--spacing-sm);
   background-color: var(--color-offwhite);
+  gap: 2.5rem;
 }
 
 /* =============================================
    EMBLEM
    ============================================= */
 .emblem-wrapper {
-  width: min(420px, 88vw);
-  margin-bottom: var(--spacing-md);
+  width: min(400px, 50vw);
+  margin-top: var(--spacing-sm);
 }
 
 .emblem-wrapper img {
@@ -122,14 +124,15 @@ body {
    ============================================= */
 .save-the-date {
   font-family: var(--font-primary);
-  font-size: clamp(2.4rem, 9vw, 6.5rem);
+  font-size: clamp(2rem, 4vw, 4rem);
   font-weight: 300;
-  letter-spacing: clamp(0.25em, 2vw, 0.55em);
+  letter-spacing: clamp(0.1em, 1.5vw, 0.3em);
   text-transform: uppercase;
   color: var(--color-red);
   text-align: center;
   line-height: 1.1;
-  margin-bottom: var(--spacing-md);
+  padding-left: clamp(0.5rem, 0.5rem, 3rem);
+  /* margin-bottom: var(--spacing-md); */
   text-shadow: 0 1px 4px rgba(140, 21, 48, 0.15);
 }
 
@@ -193,7 +196,7 @@ body {
    ============================================= */
 .video-section {
   width: 100%;
-  padding: 0 var(--spacing-sm) var(--spacing-lg);
+  /* padding: var(--spacing-sm); */
   background-color: var(--color-offwhite);
   display: flex;
   flex-direction: column;
@@ -256,10 +259,10 @@ body {
 
 .couple-names {
   font-family: var(--font-primary);
-  font-size: clamp(2.6rem, 10vw, 7rem);
+  font-size: clamp(2rem, 4vw, 4rem);
   font-weight: 300;
   letter-spacing: clamp(0.1em, 2vw, 0.3em);
-  color: var(--color-red);
+  color: var(--color-pink-dark);
   text-transform: uppercase;
   line-height: 1;
   margin-bottom: var(--spacing-sm);
@@ -273,7 +276,7 @@ body {
 
 .wedding-details {
   font-family: var(--font-primary);
-  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
   letter-spacing: clamp(0.18em, 1.5vw, 0.35em);
   text-transform: uppercase;
   color: var(--color-grey-dark);
@@ -300,19 +303,19 @@ body {
 
 .countdown-number {
   font-family: var(--font-primary);
-  font-size: clamp(2.8rem, 10vw, 6rem);
+  font-size: clamp(2rem, 4vw, 4rem);
   font-weight: 300;
-  color: var(--color-red);
+  color: var(--color-pink-dark);
   line-height: 1;
   letter-spacing: -0.02em;
 }
 
 .countdown-label {
   font-family: var(--font-primary);
-  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: var(--color-grey-dark);
   font-weight: 400;
 }
 
@@ -332,7 +335,7 @@ body {
 
 .form-instruction {
   font-family: var(--font-primary);
-  font-size: clamp(0.85rem, 2.5vw, 1.05rem);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   color: var(--color-text-muted);
   text-align: center;
   letter-spacing: 0.04em;
@@ -357,7 +360,7 @@ body {
 
 .form-label {
   font-family: var(--font-primary);
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--color-grey-dark);
@@ -389,7 +392,7 @@ body {
 
 .form-submit {
   font-family: var(--font-primary);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--color-white);
@@ -476,13 +479,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--spacing-xl) var(--spacing-sm);
-  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  /* padding: var(--spacing-sm); */
+  /* gap: var(--spacing-sm); */
 }
 
 .see-you-soon {
   font-family: var(--font-primary);
-  font-size: clamp(1.4rem, 6vw, 3.5rem);
+  font-size: clamp(1.5rem, 5vw, 3rem);
   font-weight: 300;
   letter-spacing: clamp(0.2em, 2vw, 0.45em);
   text-transform: uppercase;
@@ -492,9 +496,7 @@ body {
 }
 
 .footer-emblem {
-  width: min(120px, 28vw);
-  opacity: 0.35;
-  margin-top: var(--spacing-sm);
+  width: min(400px, 50vw);
 }
 
 .footer-emblem img {
