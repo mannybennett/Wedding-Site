@@ -107,7 +107,7 @@ export default function SaveTheDate() {
           Manny <span className="ampersand">&amp;</span> Liv
         </h2>
 
-        <p className="wedding-details">February 7, 2027</p>
+        <p className="wedding-details2">February 7, 2027</p>
         <p className="wedding-details">Lakeland, FL</p>
 
         <div className="countdown-wrapper" aria-label={`${daysToGo} days to go`}>
@@ -201,7 +201,8 @@ export default function SaveTheDate() {
       <footer className="footer-section">
         {/* <div className="divider" aria-hidden="true" /> */}
 
-        <p className="see-you-soon">See You Soon!</p>
+        <p className="see-you-soon">See You There</p>
+        <p className="wedding-details2">check back soon for more details</p>
 
         {/* <div className="emblem-wrapper" aria-hidden="true">
           <img src={EMBLEM_URL} alt="" />
