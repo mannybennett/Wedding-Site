@@ -134,12 +134,13 @@ body {
 .save-the-date {
   font-family: var(--font-secondary);
   font-size: clamp(3rem, 4vw, 4rem);
-  padding-right: 10px;
+  padding-right: 15px;
   /* font-weight: 300; */
   /* letter-spacing: clamp(0.1em, 1.5vw, 0.3em); */
   /* text-transform: uppercase; */
   color: var(--color-red);
   text-align: center;
+  margin-top: var(--spacing-lg);
   /* line-height: 1.1; */
   /* padding-left: clamp(0.5rem, 0.5rem, 3rem); */
   /* margin-bottom: var(--spacing-md); */
@@ -278,7 +279,7 @@ body {
   line-height: 1;
   margin-bottom: var(--spacing-sm);
   margin-top: var(--spacing-lg);
-  padding-right: 10px;
+  padding-right: 15px;
 }
 
 .ampersand {
@@ -518,7 +519,7 @@ body {
   /* letter-spacing: clamp(0.2em, 2vw, 0.45em); */
   /* text-transform: uppercase; */
   color: var(--color-red);
-  padding-right: 10px;
+  padding-right: 15px;
   text-align: center;
   /* line-height: 1.1; */
 }

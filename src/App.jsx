@@ -201,8 +201,8 @@ export default function SaveTheDate() {
       <footer className="footer-section">
         {/* <div className="divider" aria-hidden="true" /> */}
 
-        <p className="see-you-soon">See You There</p>
-        <p className="wedding-details2">check back soon for more details</p>
+        <p className="see-you-soon">See You Soon</p>
+        <p className="wedding-details2">Check back later for more details.</p>
 
         {/* <div className="emblem-wrapper" aria-hidden="true">
           <img src={EMBLEM_URL} alt="" />
