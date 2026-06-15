@@ -1,15 +1,23 @@
+@font-face {
+  font-family: 'Duality'; 
+  src: url('./duality.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* =============================================
    CSS CUSTOM PROPERTIES
    ============================================= */
 :root {
-  --color-bg: #fffaf8;
+  --color-bg: #ffebfe;
   --color-cream: #f5ede7;
   --color-offwhite: #fdf6f4;
   --color-white: #ffffff;
   --color-pink-light: #f4b8cb;
   --color-pink: #e8799a;
-  --color-pink-dark: #c94f72;
-  --color-red: #b52142;
+  --color-pink-dark: #e19abe;
+  --color-red: #a02b37;
   --color-red-deep: #8c1530;
   --color-grey-light: #e8ddd8;
   --color-grey: #9e8880;
@@ -19,6 +27,7 @@
   --color-text-muted: #7a5e57;
 
   --font-primary: "legitima", serif;
+  --font-secondary: 'Duality', sans-serif;
 
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -73,7 +82,7 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  gap: 2rem;
+  /* gap: 2rem; */
 }
 
 /* =============================================
@@ -101,7 +110,7 @@ body {
   align-items: center;
   width: 100%;
   padding: var(--spacing-sm);
-  background-color: var(--color-offwhite);
+  /* background-color: var(--color-offwhite); */
   gap: 2.5rem;
 }
 
@@ -123,16 +132,16 @@ body {
    SAVE THE DATE HEADING
    ============================================= */
 .save-the-date {
-  font-family: var(--font-primary);
-  font-size: clamp(2rem, 4vw, 4rem);
-  font-weight: 300;
-  letter-spacing: clamp(0.1em, 1.5vw, 0.3em);
-  text-transform: uppercase;
+  font-family: var(--font-secondary);
+  font-size: clamp(3rem, 4vw, 4rem);
+  /* font-weight: 300; */
+  /* letter-spacing: clamp(0.1em, 1.5vw, 0.3em); */
+  /* text-transform: uppercase; */
   color: var(--color-red);
   text-align: center;
   line-height: 1.1;
-  padding-left: clamp(0.5rem, 0.5rem, 3rem);
-  /* margin-bottom: var(--spacing-md); */
+  /* padding-left: clamp(0.5rem, 0.5rem, 3rem); */
+  margin-bottom: var(--spacing-md);
   text-shadow: 0 1px 4px rgba(140, 21, 48, 0.15);
 }
 
@@ -197,7 +206,7 @@ body {
 .video-section {
   width: 100%;
   /* padding: var(--spacing-sm); */
-  background-color: var(--color-offwhite);
+  /* background-color: var(--color-offwhite); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,7 +217,7 @@ body {
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-card);
+  /* box-shadow: var(--shadow-card); */
   border: 1px solid var(--color-grey-light);
 }
 
@@ -251,36 +260,37 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--spacing-lg) var(--spacing-sm);
-  background-color: var(--color-offwhite);
+  padding-top: var(--spacing-lg);
+  /* background-color: var(--color-offwhite); */
   width: 100%;
   text-align: center;
 }
 
 .couple-names {
-  font-family: var(--font-primary);
-  font-size: clamp(2rem, 4vw, 4rem);
-  font-weight: 300;
-  letter-spacing: clamp(0.1em, 2vw, 0.3em);
+  font-family: var(--font-secondary);
+  font-size: clamp(3rem, 4vw, 4rem);
+  /* font-weight: 300; */
+  /* letter-spacing: clamp(0.1em, 2vw, 0.3em); */
   color: var(--color-pink-dark);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   line-height: 1;
   margin-bottom: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
 }
 
 .ampersand {
   color: var(--color-pink-dark);
-  font-weight: 300;
+  /* font-weight: 300; */
   margin: 0 0.15em;
 }
 
 .wedding-details {
   font-family: var(--font-primary);
-  font-size: clamp(1.5rem, 4vw, 3rem);
-  letter-spacing: clamp(0.18em, 1.5vw, 0.35em);
-  text-transform: uppercase;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  letter-spacing: clamp(0.15em, 1vw, 0.30em);
+  /* text-transform: uppercase; */
   color: var(--color-grey-dark);
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
   font-weight: 400;
 }
 
@@ -288,7 +298,10 @@ body {
    COUNTDOWN
    ============================================= */
 .countdown-wrapper {
+  background-color: var(--color-red);
+  width: 100%;
   margin-top: var(--spacing-md);
+  padding: 2rem 0 2.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -306,7 +319,7 @@ body {
   font-size: clamp(2rem, 4vw, 4rem);
   font-weight: 300;
   color: var(--color-pink-dark);
-  line-height: 1;
+  /* line-height: 1; */
   letter-spacing: -0.02em;
 }
 
@@ -315,7 +328,7 @@ body {
   font-size: clamp(1rem, 2vw, 1.5rem);
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--color-grey-dark);
+  color: var(--color-white);
   font-weight: 400;
 }
 
@@ -402,7 +415,7 @@ body {
   padding: 1rem 2rem;
   cursor: pointer;
   transition: var(--transition-smooth);
-  box-shadow: var(--shadow-button);
+  /* box-shadow: var(--shadow-button); */
   margin-top: var(--spacing-xs);
   font-weight: 400;
 }
@@ -418,7 +431,8 @@ body {
 }
 
 .form-submit:disabled {
-  opacity: 0.65;
+  /* opacity: 0.65; */
+  background-color: lightgray;
   cursor: not-allowed;
   transform: none;
 }
@@ -475,11 +489,11 @@ body {
    ============================================= */
 .footer-section {
   width: 100%;
-  background-color: var(--color-offwhite);
+  /* background-color: var(--color-offwhite); */
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: var(--spacing-md);
+  margin: var(--spacing-md) 0;
   /* padding: var(--spacing-sm); */
   /* gap: var(--spacing-sm); */
 }
@@ -524,7 +538,7 @@ body {
 /* =============================================
    RESPONSIVE — DESKTOP ENHANCEMENTS
    ============================================= */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .hero-section {
     padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
   }
@@ -540,4 +554,4 @@ body {
   .footer-section {
     padding: var(--spacing-xl) var(--spacing-lg);
   }
-}
+} */

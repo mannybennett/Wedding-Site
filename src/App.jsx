@@ -134,7 +134,7 @@ export default function SaveTheDate() {
             >
               <div className="form-field">
                 <label htmlFor="guest-name" className="form-label">
-                  Name
+                  Full Name
                 </label>
                 <input
                   id="guest-name"
