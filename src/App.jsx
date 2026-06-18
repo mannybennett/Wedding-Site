@@ -3,6 +3,9 @@
 import { useState, useEffect } from "react";
 import { Heart, CheckCircle, Film } from "lucide-react";
 import EMBLEM_URL from "./swanemblem_B.png"
+import text1 from "./text1.png"
+import text2 from "./text2.png"
+import text3 from "./text3.png"
 import "./App.css";
 
 const WEDDING_DATE = new Date("2027-02-07T00:00:00");
@@ -81,7 +84,11 @@ export default function SaveTheDate() {
         </div>
 
         {/* Save the Date */}
-        <h1 className="save-the-date">Save the Date</h1>
+          <img
+            className="title"
+            src={text1}
+            alt="Save The Date Text"
+          />
 
         {/* <div className="divider" aria-hidden="true" /> */}
       </section>
@@ -91,7 +98,7 @@ export default function SaveTheDate() {
         <div className="video-container" aria-label="Wedding Video">
           <iframe
             className="video-iframe"
-            src="https://www.youtube.com/embed/tLXIhwDgT1o?controls=1&rel=0&modestbranding=1&iv_load_policy=3"
+            src="https://www.youtube.com/embed/qAitZG0tr_Q?controls=1&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1"
             title="Wedding Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -102,9 +109,11 @@ export default function SaveTheDate() {
 
       {/* ── NAMES & DETAILS ── */}
       <section className="names-section">
-        <h2 className="couple-names">
-          Manny <span className="ampersand">&amp;</span> Liv
-        </h2>
+        <img
+            className="names"
+            src={text2}
+            alt="Save The Date Text"
+          />
 
         <p className="wedding-details2">February 7, 2027</p>
         <p className="wedding-details">Lakeland, FL</p>
@@ -200,7 +209,11 @@ export default function SaveTheDate() {
       <footer className="footer-section">
         {/* <div className="divider" aria-hidden="true" /> */}
 
-        <p className="see-you-soon">See You Soon</p>
+        <img
+            className="seeYouThere"
+            src={text3}
+            alt="Save The Date Text"
+          />
         <p className="wedding-details2">Check back later for more details.</p>
 
         {/* <div className="emblem-wrapper" aria-hidden="true">

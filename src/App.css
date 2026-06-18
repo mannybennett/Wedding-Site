@@ -136,6 +136,11 @@ body {
 /* =============================================
    SAVE THE DATE HEADING
    ============================================= */
+.title {
+  width: min(400px, 50vw);
+  margin: var(--spacing-sm) 0 var(--spacing-lg);
+}
+
 .save-the-date {
   font-family: var(--font-secondary);
   font-size: clamp(3rem, 4vw, 4rem);
@@ -217,28 +222,35 @@ body {
   align-items: center;
 }
 
+/* The outer bounding box that clips the unwanted YouTube menus */
 .video-container {
   width: min(860px, 92vw);
   position: relative;
   border-radius: var(--radius-md);
-  overflow: hidden;
+  overflow: hidden; /* 🔑 Crucial: This chops off the sides pushed out of bounds */
   border: 1px solid var(--color-grey-light);
 }
 
-/* 16:9 aspect ratio container box */
+/* Maintains your perfect 16:9 responsive aspect ratio box */
 .video-container::before {
   content: "";
   display: block;
   padding-top: 56.25%;
 }
 
-/* 🆕 Add this so the iframe fills your responsive aspect-ratio box perfectly */
+/* 🆕 The CSS Trick from the video */
 .video-iframe {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  
+  /* Make the iframe 300% wider so its edges are pushed far out of the box */
+  width: 300%; 
   height: 100%;
+  
+  /* Center the video within that 300% width space to hide the left and right sides evenly */
+  margin-left: -100%; 
+  
   border: 0;
 }
 
@@ -253,6 +265,11 @@ body {
   /* background-color: var(--color-offwhite); */
   width: 100%;
   text-align: center;
+}
+
+.names {
+  width: min(400px, 60vw);
+  margin: var(--spacing-sm) 0;
 }
 
 .couple-names {
@@ -496,6 +513,11 @@ body {
   padding-bottom: var(--spacing-xl);
   /* padding: var(--spacing-sm); */
   /* gap: var(--spacing-sm); */
+}
+
+.seeYouThere {
+  width: min(400px, 50vw);
+  margin: var(--spacing-sm) 0;
 }
 
 .see-you-soon {
