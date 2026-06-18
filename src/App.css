@@ -249,10 +249,9 @@ body {
   border: 0;
   background-color: var(--color-black);
   
-  /* 🆕 Safari Hardware Acceleration Fixes */
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  will-change: transform;
+  /* Resetting hardware profiles back to natural layer composition */
+  transform: none;
+  -webkit-transform: none;
 }
 
 /* =============================================

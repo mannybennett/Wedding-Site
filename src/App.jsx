@@ -94,7 +94,7 @@ export default function SaveTheDate() {
         {/* <div className="divider" aria-hidden="true" /> */}
       </section>
 
-      {/* ── VIDEO (Local Repository Pristine Setup) ── */}
+      {/* ── VIDEO ── */}
       <section className="video-section">
         <div className="video-container" aria-label="Wedding Video">
           <video 
@@ -104,9 +104,14 @@ export default function SaveTheDate() {
             disablePictureInPicture
             controlsList="nodownload no-remote-playback"
             preload="metadata"
+            crossOrigin="anonymous"
           >
-            {/* #t=0.001 forces Safari to display the first frame as a thumbnail */}
+            {/* Priority 1: Uses the imported asset from your src directory */}
             <source src={`${video}#t=0.001`} type="video/mp4" />
+            
+            {/* Priority 2: Direct relative path pointing straight to the public folder copy */}
+            <source src="/videoCopy.mp4#t=0.001" type="video/mp4" />
+            
             Your browser does not support the video tag.
           </video>
         </div>
