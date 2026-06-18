@@ -6,6 +6,7 @@ import EMBLEM_URL from "./swanemblem_B.png"
 import text1 from "./text1.png"
 import text2 from "./text2.png"
 import text3 from "./text3.png"
+import video from "./video.mp4"
 import "./App.css";
 
 const WEDDING_DATE = new Date("2027-02-07T00:00:00");
@@ -93,17 +94,19 @@ export default function SaveTheDate() {
         {/* <div className="divider" aria-hidden="true" /> */}
       </section>
 
-      {/* ── VIDEO ── */}
+      {/* ── VIDEO (Local Repository Pristine Setup) ── */}
       <section className="video-section">
         <div className="video-container" aria-label="Wedding Video">
-          <iframe
-            className="video-iframe"
-            src="https://www.youtube.com/embed/qAitZG0tr_Q?controls=1&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1"
-            title="Wedding Video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
+          <video 
+            className="video-element"
+            controls
+            playsInline
+            disablePictureInPicture
+            controlsList="nodownload no-remote-playback"
+          >
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
 
