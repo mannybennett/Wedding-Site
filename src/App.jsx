@@ -88,16 +88,15 @@ export default function SaveTheDate() {
 
       {/* ── VIDEO ── */}
       <section className="video-section">
-        <div className="video-container" aria-label="Video placeholder">
-          <div className="video-placeholder">
-            <Film
-              className="video-placeholder-icon"
-              size={48}
-              strokeWidth={1}
-              aria-hidden="true"
-            />
-            <span className="video-placeholder-text">Video coming soon</span>
-          </div>
+        <div className="video-container" aria-label="Wedding Video">
+          <iframe
+            className="video-iframe"
+            src="https://www.youtube.com/embed/tLXIhwDgT1o?controls=1&rel=0&modestbranding=1&iv_load_policy=3"
+            title="Wedding Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
         </div>
       </section>
 
