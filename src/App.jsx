@@ -103,8 +103,10 @@ export default function SaveTheDate() {
             playsInline
             disablePictureInPicture
             controlsList="nodownload no-remote-playback"
+            preload="metadata"
           >
-            <source src={video} type="video/mp4" />
+            {/* #t=0.001 forces Safari to display the first frame as a thumbnail */}
+            <source src={`${video}#t=0.001`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
