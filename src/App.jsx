@@ -71,8 +71,6 @@ export default function SaveTheDate() {
 
   return (
     <div className="page-wrapper">
-      {/* Top border accent */}
-      {/* <div className="page-border-top" aria-hidden="true" /> */}
 
       {/* ── HERO ── */}
       <section className="hero-section">
@@ -90,8 +88,6 @@ export default function SaveTheDate() {
             src={text1}
             alt="Save The Date Text"
           />
-
-        {/* <div className="divider" aria-hidden="true" /> */}
       </section>
 
       {/* ── VIDEO ── */}
@@ -217,22 +213,13 @@ export default function SaveTheDate() {
 
       {/* ── FOOTER ── */}
       <footer className="footer-section">
-        {/* <div className="divider" aria-hidden="true" /> */}
-
         <img
             className="seeYouThere"
             src={text3}
             alt="Save The Date Text"
-          />
+        />
         <p className="wedding-details2">Check back later for more details.</p>
-
-        {/* <div className="emblem-wrapper" aria-hidden="true">
-          <img src={EMBLEM_URL} alt="" />
-        </div> */}
       </footer>
-
-      {/* Bottom border accent */}
-      {/* <div className="page-border-bottom" aria-hidden="true" /> */}
     </div>
   );
 }
