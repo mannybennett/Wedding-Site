@@ -137,21 +137,21 @@ function App() {
 
   return (
     <div className="page-wrapper">
-      <header className="hero-section" id="top">
-        <div className={`site-nav-bar ${scrolled ? "is-scrolled" : ""}`}>
-          <nav className="site-nav" aria-label="Main navigation">
-            <a href="#top" className="nav-brand"><img src={EMBLEM_URL} alt="Manny and Liv swan emblem" /></a>
-            <div className="nav-links">
-              <a href="#gallery">Gallery</a>
-              <a href="#rsvp">RSVP</a>
-              <a href="#details">Details</a>
-              <a href="#party">Party</a>
-              <a href="#video">Video</a>
-              <a href="#faq">FAQ</a>
-            </div>
-          </nav>
-        </div>
+      <div className={`site-nav-bar ${scrolled ? "is-scrolled" : ""}`}>
+        <nav className="site-nav" aria-label="Main navigation">
+          <a href="#" className="nav-brand"><img src={EMBLEM_URL} alt="Manny and Liv swan emblem" /></a>
+          <div className="nav-links">
+            <a href="#gallery">Gallery</a>
+            <a href="#rsvp">RSVP</a>
+            <a href="#details">Details</a>
+            <a href="#party">Party</a>
+            <a href="#video">Video</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </nav>
+      </div>
 
+      <header className="hero-section" id="top">
         <div className="hero-content">
           <div className="emblem-wrapper" aria-label="Swan emblem">
             <img src={EMBLEM_URL} alt="Manny and Liv swan emblem" />
@@ -272,8 +272,8 @@ function App() {
 
         <section className="video-section section-shell" id="video">
           <div className="section-heading">
-            {/* <p className="eyebrow">Press play</p>
-            <h2>Before the big day</h2> */}
+            {/* <p className="eyebrow">Video</p> */}
+            {/* <h2>Before the big day</h2> */}
           </div>
           <div className="video-container" aria-label="Wedding Video">
             <video 
@@ -321,7 +321,7 @@ function App() {
             alt="Save The Date Text"
           />
         <div className="footer-photos"><img src={image1} alt="Manny and Liv in the garden" /><img src={image2} alt="Manny and Liv together outdoors" /></div>
-        <p className="footer-note">With love, Manny & Liv</p>
+        <div className="footer-note">With love, Olivia and Manny</div>
       </footer>
     </div>
   );

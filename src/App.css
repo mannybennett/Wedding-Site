@@ -128,13 +128,13 @@ h2 {
   width: 100%;
   display: flex;
   justify-content: center;
-  background: var(--color-offwhite);
+  background: var(--color-cream);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   transition: box-shadow 0.3s ease;
 }
 
 .site-nav-bar.is-scrolled {
-  box-shadow: 0 2px 12px rgba(140, 21, 48, 0.12);
+  box-shadow: 0 4px 18px rgba(140, 21, 48, 0.12);
 }
 
 .site-nav {
@@ -191,7 +191,7 @@ h2 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 28px;
+  margin: 40px 0 28px;
 }
 
 .emblem-wrapper img {
@@ -370,7 +370,7 @@ h2 {
   width: clamp(220px, 26vw, 360px);
   height: clamp(275px, 34vw, 440px);
   object-fit: fill;
-  filter: saturate(.86);
+  /* filter: saturate(.86); */
 }
 
 .carousel-track img:nth-child(even) {
@@ -702,7 +702,7 @@ h2 {
 }
 
 .footer-section {
-  padding: 45px 20px 50px;
+  padding: 45px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -742,8 +742,8 @@ h2 {
 .footer-photos {
   display: flex;
   gap: 16px;
-  width: min(760px, 100%);
-  margin: 38px auto 25px;
+  width: min(760px, calc(100% - 40px));
+  margin: 38px auto 61px;
 }
 
 .footer-photos img {
@@ -753,6 +753,13 @@ h2 {
 }
 
 .footer-note {
+  width: 100%;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--color-cream);
   color: var(--color-text-muted);
   font-size: 1rem;
   letter-spacing: .15em;
