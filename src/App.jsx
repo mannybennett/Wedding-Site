@@ -52,28 +52,32 @@ function useDaysUntil(targetDate) {
 const galleryImages = [
   image3,
   image10,
-  image7,
+  image4,
   image6,
   image5,
   image8,
   image9,
-  image4,
+  image7,
   image11,
   image12,
 ];
 
 const faqs = [
   {
+    question: "Is the wedding indoors or outdoors?",
+    answer: "Weather permitting, the ceremony will take place outdoors. Cocktail hour will offer both indoor and outdoor spaces, and dinner and reception will be held indoors.",
+  },
+  {
     question: "What is the dress code?",
-    answer: "We would love to see you in elevated cocktail attire. Think polished, festive, and comfortable enough to celebrate all evening.",
+    answer: "We are requesting garden formal attire; think mid-to-floor length dresses and floral patterns. As parts of the day will take place on the grass, we kindly suggest that ladies opt for wedges, block heels, or dressy flats to stay comfortable. For the men, any classic attire in light tones or standard grey/black are welcome.",
   },
   {
     question: "Where should I park?",
-    answer: "Street parking and nearby public lots are available around The Junior League Building. Please allow a few extra minutes to find a space.",
+    answer: "There is designated parking located in the lot directly behind the building. Please note that the section of Lake Morton Drive between Vistabula Street and Chiles Street will be blocked off for the duration of the wedding.",
   },
   {
     question: "Can I bring a plus-one?",
-    answer: "Please check your invitation for the names of everyone included in your party. We are keeping the guest list intimate and personal.",
+    answer: "Please check your invitation for the names of everyone included in your party.",
   },
   {
     question: "Will the ceremony and reception be at the same place?",
@@ -82,6 +86,10 @@ const faqs = [
   {
     question: "What time should I arrive?",
     answer: "Doors open at 3:30 PM. Please be seated by 3:50 PM so we can begin the ceremony promptly at 4:00 PM.",
+  },
+  {
+    question: "What if I arrive early?",
+    answer: "If you arrive prior to 3:30pm, feel free to grab a coffee at Black & Brew, a sweet treat at Mootown Scoops, a cocktail or appetizer at The Peach House, or explore nearby spots like the Lakeland Public Library or the AGB Museum of Art. All of these locations are within a block of the venue.",
   },
 ];
 
@@ -145,7 +153,7 @@ function App() {
             <a href="#rsvp">RSVP</a>
             <a href="#details">Details</a>
             <a href="#party">Party</a>
-            <a href="#video">Video</a>
+            <a href="#video">Registry</a>
             <a href="#faq">FAQ</a>
           </div>
         </nav>
@@ -184,7 +192,6 @@ function App() {
         <section className="form-section" id="rsvp">
           <div className="section-heading">
             <p className="eyebrow">RSVP</p>
-            {/* <h2>Will you join us?</h2> */}
           </div>
           {!submitted ? (
             <>
@@ -239,7 +246,7 @@ function App() {
               <div className="detail-icon"><Clock3 size={22} strokeWidth={1.4} /></div>
               <p className="detail-kicker">The schedule</p>
               <div className="timeline">
-                {[['3:30 PM', 'Guests Arrive'], ['4:00 PM', 'Ceremony Begins'], ['4:30 PM', 'Cocktail Hour'], ['5:30 PM', 'Dinner'], ['6:00 PM', 'Reception'], ['10:00 PM', 'Send Off']].map(([time, event]) => (
+                {[['3:30 PM', 'Guests Arrive'], ['4:00 PM', 'Ceremony Begins'], ['4:30 PM', 'Cocktail Hour'], ['5:30 PM', 'Dinner / Reception'], ['10:00 PM', 'Send Off']].map(([time, event]) => (
                   <div className="timeline-row" key={time}>
                     <span>{time}</span><strong>{event}</strong>
                   </div>
@@ -267,6 +274,12 @@ function App() {
                 {['René Yates', 'Emily Yates', 'Zsalonda Legister', 'Lauren Gunther'].map((name, index) => <div className="party-person" key={name}><strong>{name}</strong></div>)}
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="form-section" id="rsvp">
+          <div className="section-heading">
+            <p className="eyebrow">REGISTRY</p>
           </div>
         </section>
 
