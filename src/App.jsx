@@ -161,7 +161,6 @@ function App() {
             <a href="#gallery">Gallery</a>
             <a href="#rsvp">RSVP</a>
             <a href="#details">Details</a>
-            <a href="#party">Party</a>
             <a href="#registry">Registry</a>
             <a href="#faq">FAQ</a>
           </div>

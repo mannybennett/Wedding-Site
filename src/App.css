@@ -920,13 +920,16 @@ h2 {
     height: 270px;
   }
   .video-section {
-    padding-top: 40px;
+    padding-top: 10px;
   }
   .footer-photos img {
     height: 150px;
   }
   .footer-photos {
     gap: 10px;
+  }
+  .countdown-display {
+    margin-bottom: 5px;
   }
 }
 
