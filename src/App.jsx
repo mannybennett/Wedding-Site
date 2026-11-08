@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import {
+  Check,
   CheckCircle,
   ChevronDown,
   Clock3,
+  Copy,
   Heart,
   MapPin,
   Navigation,
@@ -102,6 +104,13 @@ function App() {
   const [submitting, setSubmitting] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
   const [scrolled, setScrolled] = useState(false);
+  const [copiedKey, setCopiedKey] = useState(null);
+
+  const handleCopy = (text, key) => {
+    navigator.clipboard.writeText(text);
+    setCopiedKey(key);
+    setTimeout(() => setCopiedKey(null), 2000);
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -153,7 +162,7 @@ function App() {
             <a href="#rsvp">RSVP</a>
             <a href="#details">Details</a>
             <a href="#party">Party</a>
-            <a href="#video">Registry</a>
+            <a href="#registry">Registry</a>
             <a href="#faq">FAQ</a>
           </div>
         </nav>
@@ -277,9 +286,69 @@ function App() {
           </div>
         </section>
 
-        <section className="form-section" id="rsvp">
+        <section className="form-section" id="registry">
           <div className="section-heading">
-            <p className="eyebrow">REGISTRY</p>
+            <p className="eyebrow">Registry</p>
+            {/* <h2>Our Future Home & Adventures</h2> */}
+          </div>
+          <p className="registry-intro">
+            The greatest gift we could ask for is your presence on our special day. Because we already share a home filled with everyday essentials, our primary focus is saving for our first house and honeymoon getaway!
+          </p>
+
+          {/* Unified Digital Contribution Card */}
+          <div className="registry-grid" style={{ gridTemplateColumns: "1fr", maxWidth: "600px" }}>
+            <div className="registry-card">
+              <div>
+                <div className="detail-icon"><Heart size={22} strokeWidth={1.4} /></div>
+                <p className="detail-kicker">The Funds</p>
+                <h3>House & Honeymoon Funds</h3>
+                <p>
+                  Help us save for our first home and kick off our marriage with an unforgettable honeymoon cruise! When sending your gift, please feel free to drop a quick note in the payment memo letting us know which fund you would like to support.
+                </p>
+                {/* <p className="form-subtext" style={{ marginBottom: "20px", color: "var(--color-text-muted)" }}>
+                  When sending your gift, please feel free to drop a quick note in the payment memo letting us know which fund you would like to support.
+                </p> */}
+              </div>
+
+              <div className="registry-details">
+                <div className="registry-pay-item">
+                  <span>Zelle:</span>
+                  <div className="registry-pay-value-group">
+                    <strong>863-224-8714</strong>
+                    <button className="copy-btn" onClick={() => handleCopy("863-224-8714", "unified-zelle")} title="Copy Zelle info">
+                      {copiedKey === "unified-zelle" ? <Check size={16} /> : <Copy size={16} />}
+                    </button>
+                  </div>
+                </div>
+                <div className="registry-pay-item">
+                  <span>Venmo:</span>
+                  <div className="registry-pay-value-group">
+                    <strong>@mannybennett</strong>
+                    <button className="copy-btn" onClick={() => handleCopy("@mannybennett", "unified-venmo")} title="Copy Venmo info">
+                      {copiedKey === "unified-venmo" ? <Check size={16} /> : <Copy size={16} />}
+                    </button>
+                  </div>
+                </div>
+                <div className="registry-pay-item">
+                  <span>Cash App:</span>
+                  <div className="registry-pay-value-group">
+                    <strong>$mannybennett</strong>
+                    <button className="copy-btn" onClick={() => handleCopy("$mannybennett", "unified-cashapp")} title="Copy Cash App info">
+                      {copiedKey === "unified-cashapp" ? <Check size={16} /> : <Copy size={16} />}
+                    </button>
+                  </div>
+                </div>
+                {/* <p className="registry-fund-note">💡 Memo Tip: Write &quot;House Fund&quot; or &quot;Honeymoon Fund&quot;</p> */}
+              </div>
+            </div>
+          </div>
+
+          {/* Separate Traditional Cards & Checks Box */}
+          <div className="registry-note-box" style={{ maxWidth: "600px" }}>
+            <h3>Traditional Cards & Checks</h3>
+            <p>
+              For those who prefer traditional gifting, a physical card box will be available at our reception. If you prefer to mail a check ahead of time, please make checks payable to either of our legal names. Thank you so much for your love and support!
+            </p>
           </div>
         </section>
 

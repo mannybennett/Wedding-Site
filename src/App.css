@@ -303,11 +303,11 @@ h2 {
 }
 
 .detail-kicker {
-  color: var(--color-pink-dark);
+  color: var(--color-pink-dark) !important;
   text-transform: uppercase;
   letter-spacing: .2em;
-  font-size: .68rem;
-  margin-bottom: 12px;
+  font-size: .68rem !important;
+  margin-bottom: 12px !important;
 }
 
 .venue-card h3 {
@@ -587,10 +587,130 @@ h2 {
 }
 
 .party-person strong {
-  color: var(--color-red-deep);
+  color: var(--color-grey-dark);
   font-family: var(--font-secondary);
-  font-size: clamp(1.35rem, 2.25vw, 2.025rem);
+  font-size: clamp(1.15rem, 1.9vw, 1.7rem);
   font-weight: 400;
+}
+
+/* --- Registry Section Styles --- */
+.registry-intro {
+  max-width: 620px;
+  text-align: center;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 65px;
+  font-size: 1.15rem;
+}
+
+.registry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  width: min(900px, 100%);
+  margin: 0 auto 28px;
+}
+
+.registry-card {
+  background: rgba(253, 246, 244, 0.68);
+  border: 1px solid var(--color-grey-light);
+  padding: 36px 28px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.registry-card h3 {
+  font-family: var(--font-secondary);
+  color: var(--color-red-deep);
+  font-size: 1.8rem;
+  margin: 8px 0 16px;
+}
+
+.registry-card p {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 0.98rem;
+  margin-bottom: 20px;
+}
+
+.registry-details {
+  border-top: 1px solid var(--color-grey-light);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.registry-pay-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  color: var(--color-grey-dark);
+}
+
+.registry-pay-item strong {
+  color: var(--color-red);
+}
+
+.registry-note-box {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  background: rgba(253, 246, 244, 0.68);
+  border: 1px solid var(--color-grey-light);
+  padding: 30px 36px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.registry-note-box h3 {
+  font-family: var(--font-secondary);
+  color: var(--color-red-deep);
+  font-size: 1.8rem;
+  margin: 8px 0 16px;
+}
+
+.registry-note-box p {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* --- Registry Enhancements Styles --- */
+.registry-pay-value-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  color: var(--color-red);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+.copy-btn:hover {
+  background: rgba(160, 43, 55, 0.08);
+  color: var(--color-red-deep);
+}
+
+.registry-fund-note {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: 16px;
+  line-height: 1.5;
+  border-top: 1px dashed var(--color-grey-light);
+  padding-top: 12px;
 }
 
 .video-section {
@@ -674,7 +794,7 @@ h2 {
   background: var(--color-red);
   color: var(--color-white);
   width: 100%;
-  padding: 70px 0;
+  padding: 0px 0 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -778,26 +898,23 @@ h2 {
   .nav-brand {
     width: 54px;
   }
-  /* .hero-content {
-    padding-top: 65px;
-  } */
   .hero-date {
     font-size: 1.5rem;
     letter-spacing: .06em;
   }
-  .details-grid, .party-grid {
+  .details-grid, .party-grid, .registry-grid {
     grid-template-columns: 1fr;
   }
-  .venue-card, .timeline-card {
+  .venue-card, .timeline-card, .registry-card {
     min-height: auto;
     padding: 27px;
+  }
+  .registry-note-box {
+    padding: 27px 20px;
   }
   .timeline-row {
     grid-template-columns: 88px 1fr;
   }
-  /* .gallery-section {
-    padding: 65px 0;
-  } */
   .carousel-track img {
     width: 210px;
     height: 270px;
