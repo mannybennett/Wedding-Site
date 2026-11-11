@@ -79,7 +79,7 @@ const faqs = [
   },
   {
     question: "Can I bring a plus-one?",
-    answer: "Please check your invitation for the names of everyone included in your party.",
+    answer: "Please check your invitation envelope for the names of everyone included in your party.",
   },
   {
     question: "Will the ceremony and reception be at the same place?",
@@ -87,7 +87,7 @@ const faqs = [
   },
   {
     question: "What time should I arrive?",
-    answer: "Doors open at 3:30 PM. Please be seated by 3:50 PM so we can begin the ceremony promptly at 4:00 PM.",
+    answer: "Guests will be welcomed in starting at 3:30 PM. Please be seated by 3:50 PM so we can begin the ceremony promptly at 4:00 PM.",
   },
   {
     question: "What if I arrive early?",
@@ -162,7 +162,7 @@ function App() {
             <a href="#rsvp">RSVP</a>
             <a href="#details">Details</a>
             <a href="#registry">Registry</a>
-            <a href="#faq">FAQ</a>
+            <a href="#faq">FAQS</a>
           </div>
         </nav>
       </div>
@@ -273,7 +273,7 @@ function App() {
             <div className="party-side">
               <div className="party-card-top"><span>Groomsmen</span></div>
               <div className="party-names">
-                {['Bryan Veiga', 'Hein Nguyen', 'Gabriel Rodríguez', 'Matthew Brooks'].map((name, index) => <div className="party-person" key={name}><strong>{name}</strong></div>)}
+                {['Bryan Veiga', 'Hien Nguyen', 'Gabriel Rodríguez', 'Matthew Brooks'].map((name, index) => <div className="party-person" key={name}><strong>{name}</strong></div>)}
               </div>
             </div>
             <div className="party-side">
@@ -299,7 +299,7 @@ function App() {
             <div className="registry-card">
               <div>
                 <div className="detail-icon"><Heart size={22} strokeWidth={1.4} /></div>
-                <p className="detail-kicker">The Funds</p>
+                {/* <p className="detail-kicker">The Funds</p> */}
                 <h3>House & Honeymoon Funds</h3>
                 <p>
                   Help us save for our first home and kick off our marriage with an unforgettable honeymoon cruise! When sending your gift, please feel free to drop a quick note in the payment memo letting us know which fund you would like to support.
@@ -373,7 +373,7 @@ function App() {
         </section>
 
         <section className="faq-section section-shell" id="faq">
-          <div className="section-heading"><p className="eyebrow">FAQ's</p></div>
+          <div className="section-heading"><p className="eyebrow">FAQS</p></div>
           <div className="faq-list">
             {faqs.map((faq, index) => (
               <div className={`faq-item ${openFaq === index ? "is-open" : ""}`} key={faq.question}>
